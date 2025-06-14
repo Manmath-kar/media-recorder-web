@@ -34,18 +34,21 @@ function AudioRecorder() {
   };
 
   return (
-    <div className="recorder">
-      <button onClick={recording ? stopRecording : startRecording}>
-        {recording ? 'Stop Recording' : 'Start Recording'}
-      </button>
-      {audioURL && (
-        <div>
-          <audio src={audioURL} controls></audio>
-          <a href={audioURL} download="recording.webm">Download</a>
-        </div>
-      )}
-    </div>
-  );
+  <div className="recorder-container">
+    <h2>🎙️ Audio Recorder</h2>
+    <button className={`record-button ${recording ? 'stop' : 'start'}`} onClick={recording ? stopRecording : startRecording}>
+      {recording ? '⏹ Stop Recording' : '🎤 Start Recording'}
+    </button>
+
+    {audioURL && (
+      <div className="preview">
+        <audio src={audioURL} controls></audio>
+        <a href={audioURL} download="recording.webm" className="download-btn">⬇ Download</a>
+      </div>
+    )}
+  </div>
+);
+
 }
 
 export default AudioRecorder;

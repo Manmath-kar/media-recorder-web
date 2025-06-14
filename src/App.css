@@ -1,145 +1,184 @@
-/* App.css */
+/* Global reset */
 body {
   margin: 0;
+  padding: 0;
+  min-height: 100vh;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #f4f4f4;
-  color: #333;
+  background-color: #f7f9fc;
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
+/* App container */
 .app {
   width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 2rem;
-  box-sizing: border-box;
+  max-width: 800px;
+  background-color: white;
+  padding: 30px 20px;
+  border-radius: 16px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
+/* Header */
 .header {
   text-align: center;
-  margin-bottom: 2rem;
+  margin-bottom: 30px;
 }
 
 .header h1 {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
-  color: #1a73e8;
+  font-size: 2rem;
+  color: #333;
 }
 
+/* Mode toggle buttons */
 .mode-toggle {
   display: flex;
   justify-content: center;
-  gap: 10px;
+  gap: 12px;
+  margin-top: 15px;
   flex-wrap: wrap;
 }
 
 .mode-toggle button {
-  margin: 0 8px;
   padding: 10px 20px;
-  border: none;
-  background-color: #ddd;
-  cursor: pointer;
-  border-radius: 5px;
+  border-radius: 20px;
+  border: 2px solid #007bff;
+  background-color: white;
+  color: #007bff;
   font-weight: bold;
-  transition: background 0.3s ease;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+
+.mode-toggle button:hover {
+  background-color: #007bff;
+  color: white;
 }
 
 .mode-toggle .active {
-  background-color: #1a73e8;
+  background-color: #007bff;
   color: white;
 }
 
 .mode-toggle .recordings-link {
-  background-color: #ffa726;
+  border-color: #28a745;
+  color: #28a745;
+}
+
+.mode-toggle .recordings-link:hover {
+  background-color: #28a745;
   color: white;
 }
 
-main {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-}
-
-.recorder {
-  background: white;
-  padding: 1.5rem;
-  margin: 1rem 0;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  width: 100%;
-  max-width: 600px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.recorder button {
-  padding: 10px 20px;
-  background-color: #43a047;
-  border: none;
-  color: white;
-  font-weight: bold;
-  border-radius: 5px;
-  cursor: pointer;
-  margin-bottom: 1rem;
-}
-
-.recorder button:hover {
-  background-color: #388e3c;
-}
-
-.recorder audio,
-.recorder video {
-  margin: 1rem 0;
-  display: block;
-  width: 100%;
-  max-width: 500px;
-}
-
-.recorder a {
-  display: inline-block;
-  margin-top: 0.5rem;
-  color: #1a73e8;
-  text-decoration: none;
-}
-
-.recordings-container {
-  width: 100%;
-  background: white;
-  padding: 1.5rem;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  max-width: 700px;
-}
-
-.recordings-container h2 {
+/* Recorder container (audio + video) */
+.recorder-container, .recorder {
+  background-color: #fff;
+  padding: 25px;
+  margin-top: 20px;
+  border-radius: 16px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   text-align: center;
-  margin-bottom: 1rem;
 }
 
+/* Titles */
+.recorder-container h2,
+.recordings-container h2 {
+  margin-bottom: 15px;
+  color: #444;
+}
+
+/* Record button styles */
+.record-button, .recorder button {
+  background-color: #007bff;
+  border: none;
+  padding: 12px 24px;
+  color: white;
+  font-size: 16px;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: 0.3s ease;
+  margin-top: 10px;
+}
+
+.record-button.stop,
+.recorder button.stop {
+  background-color: #dc3545;
+}
+
+.record-button:hover,
+.recorder button:hover {
+  opacity: 0.9;
+}
+
+/* Preview area for audio/video */
+.preview {
+  margin-top: 20px;
+}
+
+.preview audio,
+.preview video {
+  margin-bottom: 10px;
+  width: 100%;
+  max-width: 400px;
+  border-radius: 10px;
+}
+
+.preview .download-btn,
+.recorder a,
+.recording-item a {
+  display: inline-block;
+  margin-top: 8px;
+  padding: 10px 16px;
+  background-color: #28a745;
+  color: white;
+  border-radius: 20px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s ease;
+}
+
+.preview .download-btn:hover,
+.recorder a:hover,
+.recording-item a:hover {
+  background-color: #218838;
+}
+
+/* Recordings list */
+.recordings-container {
+  margin-top: 30px;
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.08);
+}
+
+.recordings-container h3 {
+  color: #333;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.recordings-container p {
+  color: #777;
+  font-style: italic;
+}
+
+/* Individual recording item */
 .recording-item {
-  margin-bottom: 1.5rem;
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-bottom: 20px;
 }
 
 .recording-item audio,
 .recording-item video {
+  margin-top: 8px;
+  border-radius: 8px;
   width: 100%;
-  max-width: 400px;
-  display: block;
-  margin-top: 0.5rem;
-}
-
-.recording-item a {
-  color: #1a73e8;
-  text-decoration: none;
-  display: inline-block;
-  margin-top: 0.25rem;
+  max-width: 300px;
 }

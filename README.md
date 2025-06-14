@@ -1,12 +1,44 @@
-# React + Vite
+# 🎤📹 Audio & Video Recorder App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple React web application that allows users to record audio or video directly in the browser, preview it, download it, and play previously recorded files.
 
-Currently, two official plugins are available:
+## 🚀 Live Demo
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+👉 [Check the Live App on Netlify](https://your-deployed-link.netlify.app)
 
-## Expanding the ESLint configuration
+## 📦 Features
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- 🎙️ **Audio Recorder**
+  - Record audio using your microphone
+  - Preview the recording
+  - Download audio in `.webm` format
+
+- 🎥 **Video Recorder**
+  - Record video using your webcam + mic
+  - Live camera preview while recording
+  - Playback and download video in `.webm` format
+
+- 🗃️ **Playback Previous Recordings**
+  - Stores recordings in browser `localStorage`
+  - Replay previous audio and video
+  - Download again if needed
+
+- 🔄 **Mode Toggle**
+  - Switch between Audio and Video mode with a button
+
+- 🧠 **Permission Handling**
+  - Gracefully handles denial of mic/camera permissions
+
+## 🛠️ Tech Stack
+
+- React.js
+- JavaScript (MediaRecorder API)
+- CSS (custom)
+
+## 🧪 How to Run Locally
+
+```bash
+git clone https://github.com/your-username/audio-video-recorder-app.git
+cd audio-video-recorder-app
+npm install
+npm start
