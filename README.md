@@ -4,7 +4,7 @@ A simple React web application that allows users to record audio or video direct
 
 ## 🚀 Live Demo
 
-👉 [Check the Live App on Netlify](https://your-deployed-link.netlify.app)
+👉 [Check the Live App on Netlify](https://media-recorder-web.netlify.app/)
 
 ## 📦 Features
 
@@ -38,7 +38,7 @@ A simple React web application that allows users to record audio or video direct
 ## 🧪 How to Run Locally
 
 ```bash
-git clone https://github.com/your-username/audio-video-recorder-app.git
-cd audio-video-recorder-app
+git clone https://github.com/Manmath-kar/media-recorder-web.git
+cd media-recorder-web
 npm install
 npm start
